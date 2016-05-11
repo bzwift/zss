@@ -2,18 +2,15 @@
 @font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 @font-family-code: Menlo, Monaco, Consolas, Courier, monospace;
 
-// Breakpoints
-@breakpoint-small: 768px;
-@breakpoint-medium: 1024px;
-@breakpoint-large: 1200px;
-
 // Global Radius
 @global-radius: 2px;
 
 // Base Colors
 @background-body: #fff;
+@background-color-light: #fff;
 @color-body: #202020;
 @color-headings: #000;
+@color-default: #000;
 
 @color-link: #256bc9;
 @color-link-hover: #e21e3b;
@@ -23,12 +20,6 @@
 @base-line-big: 28px; // 28px by default
 @base-line-small: 20px; // 20px by default
 @base-line-smaller: 16px; // 16px by default
-
-// Grid
-@grid-columns: 12;
-@grid-width: 1128; // pixels
-@grid-gutter: @base-line;
-@grid-gap: (unit(@grid-gutter)/(@grid-width/100))*1%;
 
 // Font Size
 @font-size: 15; // 15 (px) default
@@ -133,9 +124,3 @@
 @color-fieldset-border: rgba(0, 0, 0, .1);
 @fieldset-border-size: 1px;
 
-// Extra Colors
-@color-default: #e5e5e5;
-@color-primary: #2f77d1;
-@color-success: #0A8754;
-@color-error: #d11149;
-@color-warning: #f4d31e;
