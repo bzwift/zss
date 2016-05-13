@@ -11,8 +11,8 @@
 @grid-container: @grid-width + @grid-gutter; // this value includes the grid-gutter to adjust for outer margins
 @grid-gap: (@grid-gutter/@grid-width) * 1%; // calculates margin
 
-container,
 .container {
+	position: relative;
 	max-width: @grid-container;
 	width: 100%;
 	margin: 0 auto;
