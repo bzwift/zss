@@ -17,6 +17,10 @@
 	width: 100%;
 	margin: 0 auto;
 }
+.container-width {
+	position: relative;
+	margin: 0 auto;
+}
 
 // Grid
 .col(@num) {
@@ -30,6 +34,12 @@ row {
 	clear: both;
 	float: left;
 	width: 100%;
+
+	&::after {
+		display: block;
+		content: '';
+		clear: both;
+	}
 }
 
 column {
