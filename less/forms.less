@@ -2,7 +2,7 @@ form {}
 
 .form-body {
 	padding-top: 52px;
-	
+
 	h1 {
 		font-family: @font-black;
 		font-size: 48px;
@@ -10,7 +10,7 @@ form {}
 		line-height: 48px;
 		margin-bottom: 28px;
 	}
-	
+
 	h3 {
 		font-family: @font-black;
 		font-size: 24px;
@@ -18,7 +18,7 @@ form {}
 		line-height: 24px;
 		margin-bottom: 28px;
 	}
-	
+
 	p {
 		font-family: @font-semi;
 		font-size: 18px;
@@ -52,14 +52,14 @@ select {
 	border-radius: 4px;
 	box-sizing: border-box;
 	-webkit-appearance: none;
-	
+
 	& [disabled] {
 		color: @color-mid;
 		background-color: @color-light;
 		pointer-events: none;
 		pointer-events: none;
 	}
-	
+
 	&.error,
 	&[error] {
 		color: #fc6729;
@@ -82,7 +82,7 @@ select {
 }
 .select-wrapper {
 	position: relative;
-	
+
 	&:after {
 		content: '';
 		display: block;
@@ -232,7 +232,7 @@ input[type="checkbox"]:checked + label:after {
 
 
 // SUBMIT BUTTON
-input[type="submit"] {
+input[type="submit"], input[type="button"] {
 	display: block;
 	float: left;
 	height: 42px;
@@ -246,17 +246,19 @@ input[type="submit"] {
 	background-color: @color-orange;
 	border-radius: 6px;
 	box-sizing: border-box;
-	
+
+	border: 2px solid transparent;
+
 	&[secondary] {
 		background-color: @color-dark;
 	}
-	
+
 	&[disabled] {
 		color: @color-mid;
 		background-color: @color-light;
 		pointer-events: none;
 	}
-	
+
 	&:hover {
 		background-color: @color-blue;
 	}
@@ -269,7 +271,7 @@ ul.form-messaging {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	
+
 	li {
 		display: block;
 		position: relative;
@@ -284,7 +286,7 @@ ul.form-messaging {
 		background: @color-blue;
 		border-radius: 6px;
 		box-sizing: border-box;
-		
+
 		&:before {
 			content: '';
 			position: absolute;
@@ -297,16 +299,16 @@ ul.form-messaging {
 			background-position: center center;
 			background-repeat: no-repeat;
 		}
-		
+
 		&:last-child {
 			margin: 0 0 36px 0;
 		}
 	}
-	
+
 	li[error],
 	li.error {
 		background: #fc6719;
-		
+
 		&:before {
 			content: '';
 			position: absolute;
