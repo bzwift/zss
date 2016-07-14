@@ -122,8 +122,8 @@ column[offset] {
 		&[cols="10"],
 		&[cols="11"],
 		&[cols="12"] {
-			width: 100%;
-			margin: 0;
+			width: 100% - (@grid-gutter / @grid-width) * 100%;
+			margin-left: (@grid-gutter / @grid-width / 2) * 100%;
 		}
 	}
 }
