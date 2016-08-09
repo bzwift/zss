@@ -1,0 +1,645 @@
+
+.tab-filter {
+	background: #eaeaea;
+	margin-bottom: 45px;
+}
+
+.tab-filter-body {
+	clear: both;
+	display: block;
+	max-width: 980px;
+	height: 110px;
+	font-size: 24px;
+	line-height: 24px;
+	padding-top: 36px;
+	padding-left: 40px;
+	margin: 0 auto;
+	background: #eaeaea;
+	box-sizing: border-box;
+	
+	column {
+		width: 50%;
+		box-sizing: border-box;
+		
+		padding: 0 1%;
+		
+		&:first-child {
+			padding-left: 0;	
+		}
+		&:last-child {
+			padding-right: 0;	
+		}
+	}
+	
+	select {
+		background: #ffffff;
+		border: 0;
+	}
+}
+
+
+.tab-header {
+	clear: both;
+	display: block;
+	max-width: 980px;
+	color: @color-orange;
+	font-size: 24px;
+	font-family: @font-black;
+	letter-spacing: 1px;
+	line-height: 24px;
+	text-transform: uppercase;
+	padding-left: 35px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	box-sizing: border-box;
+	border-left: 5px solid transparent;
+}
+
+
+.tab-listing {
+	clear: both;
+	max-width: 980px;
+	position: relative;
+	padding-left: 35px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	box-sizing: border-box;
+	border-left: 5px solid @color-med;
+}
+.tab-listing[data-active="0"] {
+	height: 103px;
+	
+	.listing-body,
+	.listing-map {
+		display: none;	
+	}
+}
+.tab-listing[data-active="1"] {
+	border-left: 5px solid @color-orange;
+	
+	.listing-body,
+	.listing-map {
+		display: block;	
+	}
+}
+
+
+.tab-listing row {
+	position: relative;	
+}
+
+
+.tab-listing .listing-top {
+	position: relative;
+    clear: both;
+    display: table;
+    width: 100%;
+    min-height: 140px;
+	
+	.listing-image {
+		overflow: hidden;
+		position: relative;
+		display: table-cell;
+		width: 297px;
+		height: 103px;
+		vertical-align: top;
+		
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;	
+		}
+	}
+}
+
+.listing-header {
+	display: table-cell;
+	padding-right: 40px;
+	
+	* {
+		margin-top: -3px;	
+	}
+}
+.tab-listing .listing-header span {
+	float: left;
+	display: block;
+	font-size: 24px;
+	font-family: @font-black;
+	letter-spacing: 1px;
+	line-height: 24px;
+	text-transform: uppercase;
+	margin-right: 14px;
+}
+.tab-listing .listing-header .group-label {
+	float: left;
+}
+.tab-listing .listing-header .group-label::before {
+	float: left;
+	display: block;
+	width: 17px;
+	height: 17px;
+	color: #ffffff;
+	font-family: ProximaNova-Semi, arial, sans-serif;
+	font-size: 10px;
+	text-align: center;
+	line-height: 18px;
+	margin-top: 1px;
+	margin-right: 4px;
+	border-radius: 9999px;
+	box-sizing: border-box;
+}
+.tab-listing .listing-header .group-label[data-label="1"]::before {
+	content: 'A';
+	background-color: #fc4119;
+}
+.tab-listing .listing-header .group-label[data-label="2"]::before {
+	content: 'B';
+	background-color: #58c34e;
+}
+.tab-listing .listing-header .group-label[data-label="3"]::before {
+	content: 'C';
+	background-color: #3ec0e9;
+}
+.tab-listing .listing-header .group-label[data-label="4"]::before {
+	content: 'D';
+	background-color: #fccf0b;
+}
+.tab-listing .listing-header .group-label[data-label="5"]::before {
+	content: 'E';
+	background-color: #943e5e;
+}
+.tab-listing .listing-header .group-label[disabled]::before {
+	background-color: @color-med;	
+}
+
+.tab-listing .listing-header .header-title {
+	clear: both;
+	min-height: 120px;
+	font-size: 24px;
+	font-family: @font-semi;
+	line-height: 32px;
+	padding-top: 15px;
+	padding-bottom: 36px;
+	box-sizing: border-box;
+}
+
+
+.tab-listing .listing-body {
+	display: table;
+	width: 100%;
+	
+	.listing-description {
+		position: relative;
+		display: table-cell;
+		padding-right: 40px;
+	}
+	
+	.listing-groups {
+		position: relative;
+		display: table-cell;
+		width: 297px;
+	}
+}
+
+.tab-listing .listing-description .description-title {
+	display: block;
+	font-family: @font-black;
+	font-size: 16px;
+	line-height: 16px;
+	letter-spacing: 0.8px;
+	margin-bottom: 18px;
+}
+.tab-listing .listing-description .description-title::before {
+	content: '';
+	float: left;
+	display: block;
+	width: 13px;
+	height: 13px;
+	margin-right: 10px;
+	background-image: url(/assets/img/events/events_rider.svg);
+	background-repeat: no-repeat;
+	background-position: top center;	
+}
+
+.tab-listing .listing-description .description-text {
+	font-family: @font-regular;
+	font-size: 16px;
+	line-height: 24px;
+	margin-bottom: 52px;
+}
+
+
+.tab-listing .listing-groups .groups-title {
+	font-family: @font-black;
+	font-size: 16px;
+	line-height: 16px;
+	letter-spacing: 0.8px;
+	margin-bottom: 20px;
+}
+.tab-listing .listing-groups .groups-data {
+	clear: both;
+}
+.tab-listing .listing-groups .group-row {
+	position: relative;
+	float: left;
+	
+	&.range {
+		width: 160px;	
+	}
+}
+
+.tab-listing .listing-groups .group-label {
+	clear: both;
+	float: left;
+	margin-bottom: 10px;
+}
+.tab-listing .listing-groups .group-label::before {
+	float: left;
+	display: block;
+	width: 25px;
+	height: 25px;
+	color: #ffffff;
+	font-family: ProximaNova-Semi, arial, sans-serif;
+	font-size: 14px;
+	text-align: center;
+	line-height: 26px;
+	border-radius: 9999px;
+	box-sizing: border-box;
+}
+.tab-listing .listing-groups .group-label[data-label="1"]::before {
+	content: 'A';
+	background-color: #fc4119;
+}
+.tab-listing .listing-groups .group-label[data-label="2"]::before {
+	content: 'B';
+	background-color: #58c34e;
+}
+.tab-listing .listing-groups .group-label[data-label="3"]::before {
+	content: 'C';
+	background-color: #3ec0e9;
+}
+.tab-listing .listing-groups .group-label[data-label="4"]::before {
+	content: 'D';
+	background-color: #fccf0b;
+}
+.tab-listing .listing-groups .group-label[data-label="5"]::before {
+	content: 'E';
+	background-color: #943e5e;
+}
+.tab-listing .listing-groups .group-label[disabled]::before {
+	background-color: @color-med;	
+}
+
+.tab-listing .listing-groups .group-pace-icon {
+	float: left;
+    width: 12px;
+    height: 12px;
+    margin-top: 6px;
+    margin-left: 22px;
+    margin-right: 1px;
+    background-image: url(/assets/img/events/events_speed.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.tab-listing .listing-groups .group-from {
+	float: left;
+	height: 20px;
+	color: #3e3e3e;
+	font-family: ProximaNova-Black, arial, sans-serif;
+	font-size: 16px;
+	letter-spacing: 0.8px;
+	line-height: 16px;
+	margin-top: 4px;
+	margin-left: 8px;
+}
+.tab-listing .listing-groups .group-divider {
+	float: left;
+	height: 20px;
+	color: #3e3e3e;
+	font-family: ProximaNova-Black, arial, sans-serif;
+	font-size: 16px;
+	letter-spacing: 0.8px;
+	line-height: 16px;
+	margin-top: 4px;
+}
+.tab-listing .listing-groups .group-divider::before {
+    content: '-';
+}
+.tab-listing .listing-groups .group-to {
+	float: left;
+	height: 20px;
+	color: #3e3e3e;
+	font-family: ProximaNova-Black, arial, sans-serif;
+	font-size: 16px;
+	letter-spacing: 0.8px;
+	line-height: 16px;
+	margin-top: 4px;
+}
+
+.tab-listing .listing-groups .group-unit {
+	float: left;
+    height: 20px;
+    color: #3e3e3e;
+    font-family: ProximaNova-Regular, arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    line-height: 15px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-left: 7px;
+}
+.tab-listing .listing-groups .group-unit[data-type="1"]::before {
+	content: "W/KG";
+}
+.tab-listing .listing-groups .group-unit[data-type="2"]::before {
+	content: "KPH";
+}
+
+.tab-listing .listing-groups .group-laps-icon {
+	float: left;
+	width: 13px;
+	height: 13px;
+	margin-top: 1px;
+	background-image: url(/assets/img/events/events_laps.svg);
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+.tab-listing .listing-groups .group-time-icon {
+	float: left;
+	width: 13px;
+	height: 13px;
+	margin-top: 4px;
+	margin-right: 8px;
+	background-image: url(/assets/img/events/events_time.svg);
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+.tab-listing .listing-groups .group-value {
+	float: left;
+    height: 20px;
+    color: #3e3e3e;
+    font-family: ProximaNova-Black, arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    line-height: 16px;
+    margin-top: 4px;
+}
+
+
+.tab-listing .listing-map {}
+.tab-listing .listing-map .map-title {
+	color: #3e3e3e;
+}
+.tab-listing .listing-map .map-title .map-world {
+	float: left;
+	display: block;
+	color: #3e3e3e;
+	font-family: @font-black;
+	font-size: 16px;
+	letter-spacing: 0.8px;
+	line-height: 16px;
+	margin-top: -1px;
+	margin-right: 9px;
+}
+.tab-listing .listing-map .map-title .map-route {
+	float: left;
+	display: block;
+	font-family: @font-semi;
+	font-size: 16px;
+	letter-spacing: 0.8px;
+	line-height: 16px;
+	margin-right: 28px;
+}
+.tab-listing .listing-map .map-title .map-lap-count {
+	float: left;
+	display: block;
+	font-family: @font-semi;
+	font-size: 16px;
+	letter-spacing: 0.8px;
+	line-height: 16px;
+}
+.tab-listing .listing-map .map-title .map-elevation {
+	float: left;
+	display: block;
+	color: @color-blue;
+	font-family: @font-black;
+	font-size: 16px;
+	letter-spacing: 0.8px;
+	line-height: 16px;
+	margin-top: -1px;
+}
+.tab-listing .listing-map .map-title .map-elevation::before {
+	content: '';
+	float: left;
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-top: -1px;
+	margin-left: 12px;
+	margin-right: 2px;
+	background-image: url(/assets/img/events/events_elevation.svg);
+	background-repeat: no-repeat;
+	background-position: top center;	
+}
+.tab-listing .listing-map .map-title .map-elevation::after {
+	content: 'M';
+	float: right;
+	display: block;
+	color: #3e3e3e;
+	font-family: @font-semi;
+	font-size: 16px;
+	letter-spacing: 0.8px;
+	line-height: 16px;	
+	margin-top: 1px;
+	margin-left: 2px;
+}
+.tab-listing .listing-map .map-title .map-distance {
+	float: left;
+	display: block;
+	color: @color-red;
+	font-family: @font-black;
+	font-size: 16px;
+	letter-spacing: 0.8px;
+	line-height: 16px;
+	margin-top: -1px;
+}
+.tab-listing .listing-map .map-title .map-distance::before {
+	content: '';
+	float: left;
+	display: block;
+	width: 13px;
+	height: 13px;
+	margin-top: 1px;
+	margin-left: 13px;
+	margin-right: 6px;
+	background-image: url(/assets/img/events/events_distance.svg);
+	background-repeat: no-repeat;
+	background-position: top center;	
+}
+.tab-listing .listing-map .map-title .map-distance::after {
+	content: 'KM';
+	float: right;
+	display: block;
+	color: #3e3e3e;
+	font-family: @font-semi;
+	font-size: 16px;
+	letter-spacing: 0.8px;
+	line-height: 16px;
+	margin-top: 1px;
+	margin-left: 2px;
+}
+
+.tab-listing .listing-map {
+	clear: both;	
+}
+.tab-listing .listing-map .map-images {
+	position: relative;
+	clear: both;
+	display: table;
+	width: 100%;
+	min-height: 155px;
+}
+.tab-listing .listing-map .map-images .map-elevation {
+	position: relative;
+	display: table-cell;
+	width: auto;
+	min-height: 150px;
+	
+	img {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+}
+.tab-listing .listing-map .map-images .map-world {
+	position: relative;
+	display: table-cell;
+	width: 297px;
+	min-height: 150px;
+	
+	img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
+}
+
+
+@media (max-width: @breakpoint-tablet) {
+	.tab-filter-body {
+		padding-left: 20px;	
+		padding-right: 16px;
+	}
+	
+	.tab-header {
+		padding: 0 16px;	
+	}
+	
+	.tab-listing {
+		padding: 0 16px;	
+	}
+	
+	.tab-listing .listing-top {
+		display: block;	
+	}
+	.tab-listing .listing-top .listing-header {
+	    display: block;
+	    padding: 0;
+	}
+	
+	.tab-listing .listing-header .header-title {
+		padding-bottom: 20px;
+	}
+	
+	.tab-listing .listing-top .listing-image {
+		overflow: visible;
+		display: block;
+		width: 100%;
+		height: auto;
+		max-height: auto;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+	.tab-listing .listing-top .listing-image img {
+		position: relative;	
+	}
+	
+	.tab-listing .listing-body {
+		display: block;	
+	}
+	.tab-listing .listing-body .listing-description {
+	    position: relative;
+	    display: block;
+	    padding: 0;
+	}
+	.tab-listing .listing-description .description-text {
+		margin-bottom: 30px;	
+	}
+	.tab-listing .listing-body .listing-groups {
+		display: block;	
+	}
+	
+	.tab-listing .listing-map .map-title {
+		padding-top: 30px;	
+	}
+	.tab-listing .listing-map .map-title .map-world {
+		margin-bottom: 12px;	
+	}
+	.tab-listing .listing-map .map-title .map-lap-count {
+		clear: both;	
+	}
+	
+	.tab-listing .listing-map .map-images {
+		display: block;	
+		padding-top: 20px;
+	}
+	.tab-listing .listing-map .map-images .map-elevation {
+		display: block;
+		width: 100%;
+		min-height: 75px;
+		margin-bottom: 20px;
+	}
+	.tab-listing .listing-map .map-images .map-world {
+	    position: relative;
+	    display: block;
+	    width: 100%;
+	    min-height: 150px;
+	}
+	.tab-listing .listing-map .map-images .map-world img {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    margin: auto;
+	}
+}
+
+
+@media (max-width: @breakpoint-mobile) {
+	.tab-filter-body {
+		height: 176px; 
+		
+		column {
+			width: 100%;	
+			padding: 0;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
