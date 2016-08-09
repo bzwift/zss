@@ -1,36 +1,26 @@
 /* =Buttons
 -----------------------------------------------------------------------------*/
-.btn,
-button {
-	display: inline-block;
-	vertical-align: top;
-
-	font-family: @font-family-base;
-	font-size: @font-size-btn-normal;
-	font-weight: normal;
-
-	white-space: nowrap;
-
-	padding: @padding-btn;
-	height: @input-height;
-	line-height: @input-height;
-
-    text-align: center;
-	text-decoration: none;
-
-	-webkit-appearance: none;
-
-	outline: none;
-	margin: 0;
-	border: none;
-	border-radius: @global-radius;
-	box-shadow: none;
-	cursor: pointer;
-	color: rgba(0, 0, 0, 1);
-	background: @color-default;
+.bttn {
+	position: relative;
+	float: left;
+    color: #ffffff;
+    font-size: 14px;
+    height: 34px;
+    font-family: ProximaNova-Semi, arial, sans-serif;
+    letter-spacing: 0.6px;
+    line-height: 36px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-left: 14px;
+    padding-right: 14px;
+    background: #fc6719;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
 
 	&:hover {
-		color: rgba(0, 0, 0, .6);
+		color: #ffffff;
+		background: #3fc1e9;
 		text-decoration: none;
 	}
 	&::-moz-focus-inner {
@@ -38,15 +28,7 @@ button {
 		padding: 0;
 	}
 	&[disabled] {
-		cursor: default;
-		box-shadow: none;
-		opacity: 0.4;
-
-		&:hover {
-			background: @color-default;
-			color: rgba(0, 0, 0, 1);
-			text-decoration: none;
-		}
+		&:hover {}
 	}
 	
 }

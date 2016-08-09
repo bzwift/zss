@@ -1,6 +1,5 @@
 // Tables
 table {
-	max-width: 100%;
 	width: 100%;
 	empty-cells: show;
 
@@ -14,21 +13,261 @@ table {
 
 	th,
 	td {
-		font-size: @font-size-table;
-		border-bottom: 1px solid rgba(0, 0, 0, .04);
-		padding: 16px;
-		padding-bottom: 15px;
+		font-size: 16px;
+		text-align: left;
+		line-height: 16px;
+		padding: 0;
+		
 		&:first-child {
-			padding-left: 0;
+			text-align: left;
 		}
 		&:last-child {
-			padding-right: 0;
 		}
 	}
+	td {
+		font-family: ProximaNova-Regular, arial, sans-serif;
+		vertical-align: middle;
+		padding-bottom: 31px;
+	}
+	th {
+		font-family: ProximaNova-Semi, arial, sans-serif;
+		text-transform: uppercase;
+		vertical-align: bottom;
+		padding-bottom: 34px;
+		background: transparent;	
+	}
 
-	tfoot th,
-	tfoot td {
-		color: rgba(0, 0, 0, .5);
+	tfoot th {}
+	tfoot td {}
+}
+
+@media (max-width: 768px) {
+	table th,
+	table td {
+		font-size: 14px;
+		line-height: 14px;
+		
+		&:first-child {
+		}
+		&:last-child {
+		}
+	}
+	
+}
+
+
+// TABLE TAB
+.table-tab-header {
+	clear: both;
+	position: relative;
+	
+	row {
+		position: relative;	
+	}
+	
+	h2 {
+		color: #3fc1e9;
+		font-family: ProximaNova-Black, arial, sans-serif;
+		font-size: 48px;
+		line-height: 56px;
+		margin-bottom: 59px;
+	}
+	
+	h3 {
+		color: #3e3e3e;
+		font-family: ProximaNova-Black, arial, sans-serif;
+		font-size: 32px;
+		line-height: 40px;
+		margin-bottom: 24px;
+	}
+	
+	.table-tab-header-text {
+		width: 50%;
+		color: #3e3e3e;
+		font-size: 18px;
+		line-height: 22px;
+		margin-bottom: 59px;
+		
+		a {
+			color: #fc6719;
+			text-decoration: none;
+			
+			&:hover {
+				color: #3fc1e9;
+				cursor: pointer;
+			}
+		}
+	}
+	
+	.table-tab-header-image {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 45%;
+		height: 100%;
+		
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			max-width: 100%;
+		}	
 	}
 }
+
+.table-tab {
+	clear: both;
+	float: left;
+	width: 100%;
+	height: auto;
+	border-bottom: 1px solid #f1f1f1;
+	list-style: none;
+	padding-top: 21px;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; 
+	
+	&:first-child {
+		border-top: 1px solid #f1f1f1;
+	}
+	&:last-child {
+		margin-bottom: 59px;
+	}
+	
+	input[type="checkbox"],
+	input[type="checkbox"] + label:before,
+	input[type="checkbox"] + label:after {
+		display: none;
+	}
+	
+	table th {
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+	table th:first-child {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	table td {
+		position: relative;	
+	}
+	table td .table-check {
+		display: block;
+		position: relative;
+		margin: auto;
+	}
+	
+	.table-tab-title {
+		position: relative;
+		width: 100%;
+		color: #3e3e3e;
+		font-family: ProximaNova-Black, arial, sans-serif;
+		font-size: 24px;
+		line-height: 24px;
+		padding: 21px 0;
+		cursor: pointer;
+		
+		&::after {
+			content: '+';
+			position: absolute;
+			top: 0;
+			right: 0;
+			font-family: ProximaNova-Black, arial, sans-serif;
+			font-size: 24px;
+			line-height: 24px;
+			padding: 21px 0;
+			color: #fc6719;
+		}
+	}	
+}
+.table-tab input[type="checkbox"]+ label table {
+	display: none;
+	position: relative;
+	display: table;
+	clear: both;
+	float: right;
+	width: 98%;
+}
+.table-tab input[type="checkbox"]:checked + label {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+.table-tab input[type="checkbox"]:checked + label .table-tab-title {
+	padding-bottom: 42px;
+}
+.table-tab input[type="checkbox"]:checked + label table {
+	position: relative;
+	display: table;
+	clear: both;
+	float: right;
+	width: 98%;
+}
+.table-tab input[type="checkbox"]:checked + label .table-tab-title::after {
+	content: '-';
+	color: #3fc1e9;
+}
+.table-tab .bttn {
+	float: none;
+	display: block;
+	font-family: ProximaNova-Semi, arial, sans-serif;
+	font-size: 18px;
+	width: 120px;
+	height: 42px;
+	line-height: 45px;
+	margin: 0 auto;
+}
+
+
+@media (max-width: 768px) {
+	.table-tab-header h2,
+	.table-tab-header h3 {
+		text-align: center;	
+	}
+	.table-tab-header .table-tab-header-image {
+		position: relative;
+		display: block;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	.table-tab-header .table-tab-header-image img {
+		position: relative;
+	}
+	.table-tab-header .table-tab-header-text {
+		width: 100%;
+		text-align: center;	
+		margin-bottom: 40px;
+	}
+	.table-tab .bttn {
+		float: none;
+		display: block;
+		font-family: ProximaNova-Semi, arial, sans-serif;
+		font-size: 12px;
+		width: 90px;
+		height: 30px;
+		line-height: 32px;
+		margin: 0 auto;
+	}
+	.table-tab table td .table-check {
+		width: 18px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
 
