@@ -1,5 +1,8 @@
 
 .tab-filter {
+	clear: both;
+	width: 100%;
+	height: 110px;
 	background: #eaeaea;
 	margin-bottom: 45px;
 }
@@ -18,7 +21,7 @@
 	box-sizing: border-box;
 	
 	column {
-		width: 50%;
+		width: 33.33%;
 		box-sizing: border-box;
 		
 		padding: 0 1%;
@@ -32,6 +35,8 @@
 	}
 	
 	select {
+		color: #b7b7b7;
+		padding-left: 16px;
 		background: #ffffff;
 		border: 0;
 	}
@@ -67,7 +72,7 @@
 	border-left: 5px solid @color-med;
 }
 .tab-listing[data-active="0"] {
-	height: 103px;
+	// height: 103px;
 	
 	.listing-body,
 	.listing-map {
@@ -94,7 +99,6 @@
     clear: both;
     display: table;
     width: 100%;
-    min-height: 140px;
 	
 	.listing-image {
 		overflow: hidden;
@@ -105,12 +109,13 @@
 		vertical-align: top;
 		
 		img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;	
+			width: 100%;
+			margin-bottom: 20px;
 		}
 	}
+}
+.tab-listing[data-active="0"] .listing-top .listing-image img {
+	margin: 0;	
 }
 
 .listing-header {
@@ -175,7 +180,6 @@
 
 .tab-listing .listing-header .header-title {
 	clear: both;
-	min-height: 120px;
 	font-size: 24px;
 	font-family: @font-semi;
 	line-height: 32px;
@@ -193,6 +197,7 @@
 		position: relative;
 		display: table-cell;
 		padding-right: 40px;
+		vertical-align: top;
 	}
 	
 	.listing-groups {
@@ -220,13 +225,13 @@
 	background-image: url(/assets/img/events/events_rider.svg);
 	background-repeat: no-repeat;
 	background-position: top center;	
+	display: none;
 }
 
 .tab-listing .listing-description .description-text {
 	font-family: @font-regular;
 	font-size: 16px;
 	line-height: 24px;
-	margin-bottom: 52px;
 }
 
 
@@ -530,9 +535,23 @@
 
 
 @media (max-width: @breakpoint-tablet) {
+	.tab-filter {
+		height: 221px;	
+	}
+	
 	.tab-filter-body {
-		padding-left: 20px;	
-		padding-right: 16px;
+		height: 221px;
+		padding-right: 40px;
+		padding-top: 36px;
+		
+		column {
+			width: 100%;	
+			padding: 0;
+		}
+	}
+	
+	.select-wrapper {
+		margin-bottom: 10px;	
 	}
 	
 	.tab-header {
@@ -565,7 +584,8 @@
 		margin-bottom: 40px;
 	}
 	.tab-listing .listing-top .listing-image img {
-		position: relative;	
+		position: relative;
+		margin: 0;
 	}
 	
 	.tab-listing .listing-body {
@@ -580,7 +600,7 @@
 		margin-bottom: 30px;	
 	}
 	.tab-listing .listing-body .listing-groups {
-		display: block;	
+		display: inline-block;	
 	}
 	
 	.tab-listing .listing-map .map-title {
@@ -621,14 +641,6 @@
 
 
 @media (max-width: @breakpoint-mobile) {
-	.tab-filter-body {
-		height: 176px; 
-		
-		column {
-			width: 100%;	
-			padding: 0;
-		}
-	}
 }
 
 
