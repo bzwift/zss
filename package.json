@@ -1,0 +1,17 @@
+{
+  "name": "bzwift-zss",
+  "description": "Zwift Style System",
+  "homepage": "https://github.com/bzwift/zss",
+  "version": "0.0.0",
+  "author": {
+    "name": "bzwift"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bzwift/zss/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https@github.com:bzwift/zss.git"
+  }
+}
