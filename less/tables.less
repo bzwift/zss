@@ -22,22 +22,30 @@ table {
 		}
 		&:last-child {
 		}
+
+		&.centered {
+			text-align: center;
+		}
 	}
-	
+
 	td {
 		font-size: 14px;
 		text-align: left;
 		line-height: 14px;
 		padding: 0;
-		
+
 		&:first-child {
 			text-align: left;
 		}
 		&:last-child {
 		}
+
+		&.centered {
+			text-align: center;
+		}
 	}
-	
-	
+
+
 	td {
 		font-family: ProximaNova-Regular, arial, sans-serif;
 		vertical-align: middle;
@@ -117,7 +125,7 @@ table {
 
 			&:hover {
 				color: #3fc1e9;
-				cursor: pointer;
+				// cursor: pointer;
 			}
 		}
 	}
@@ -199,6 +207,7 @@ table {
 		line-height: 24px;
 		padding: 21px 0;
 		cursor: pointer;
+		text-transform: uppercase;
 
 		&::after {
 			content: '+';
@@ -211,12 +220,17 @@ table {
 			padding: 21px 0;
 			color: #fc6719;
 		}
+
+		span {
+			font-family: ProximaNova-Regular, arial, sans-serif;
+			color: @color-grey;
+		}
 	}
 }
+
 .table-tab input[type="checkbox"]+ label table {
 	display: none;
 	position: relative;
-	display: table;
 	clear: both;
 	float: right;
 	width: 98%;
@@ -228,6 +242,10 @@ table {
 }
 .table-tab input[type="checkbox"]:checked + label .table-tab-title {
 	padding-bottom: 42px;
+
+	span {
+		display: none;
+	}
 }
 .table-tab input[type="checkbox"]:checked + label table {
 	position: relative;
